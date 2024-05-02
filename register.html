@@ -3,28 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giris</title>
+    <title>Kayit</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <form action="" class="form">
-            <h1 class="form__title">Giris Yap</h1>
+
+            <h1 class="form__title">Kayit Yap</h1>
+
             <div class="form__input--group">
                 <input type="text" class="form__input" placeholder="Kullanici Adiniz" autofocus>
                 <div class="form__input-error-message">Kullanici Adi Hatali</div>
             </div>
+
+            <div class="form__input--group">
+                <input type="email" class="form__input" placeholder="Mail Adresiniz">
+                <div class="form__input-error-message">Mail Adresiniz Hatali</div>
+            </div>
+
             <div class="form__input--group">
                 <input type="password" class="form__input" placeholder="Sifreniz">
                 <div class="form__input-error-message">Sifre Hatali</div>
             </div>
+
+            <div class="form__input--group">
+                <input type="password" class="form__input" placeholder="Dogrulama Sifresi">
+                <div class="form__input-error-message">Dogrulama Sifresi Hatali</div>
+            </div>
+
             <button class="form__button">Giris Yap</button>
+
             <p class="form__text">
                 <a href="forgetpassword.html" class="form__link">Sifremi Unuttum</a>
             </p>
+            
             <p class="form__text">
-                <a href="register.html" class="form__link">Hesabim yok, Hesap olustur</a>
+                <a href="index.html" class="form__link">Hesabim var, Giris Yap</a>
             </p>
+
         </form>
     </div>
 </body>

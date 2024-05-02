@@ -1,0 +1,107 @@
+:root {
+    --color-primary: rgba(50, 120, 70, 0.5);
+    --color-primary-dark: rgba(7, 68, 26, 0.8);
+    --color-secondary: rgb(60, 60, 190);
+    --color-error: rgba(210, 40, 40);
+    --color-success: rgba(90, 150, 40, 0.7);
+
+    --border-radius: 5px;
+}
+
+body {
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark)), url(/Images/background.jpeg) ;
+    /* Olduğun kadar yer kaplar. Tekrara neden olabilir */
+    background-size: cover;
+    /* Resmi sabitlemek için kullanılır */
+    background-attachment: fixed;
+    margin: 0;
+    /* Ekranı yüzde yüz kaplasın */
+    height: 100vh;
+    /* Kapsayıcısının içinde rahatça hareket ettirmek için */
+    display: flex;
+    /* Dikey ortalama */
+    align-items: center;
+    /* Yatay ortalama */
+    justify-content: center;
+    font-size: 20px;
+}
+
+.container {
+    background-color: white;
+    width: 400px;
+    max-width: 400px;
+    max-height: 600px;
+    /* Kök elemanın kök elemanın boyutu kadar boşluk bırakmak */
+    padding: 2rem;
+    margin: 1rem;
+    box-shadow: 0 0 10px yellow;
+}
+
+.form__input--group {
+    margin-bottom: 1rem;
+
+}
+
+.form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.form__input {
+    width: 100%;
+    padding: 0.7rem;
+    /* Eğer bir elemana iç boşluk ya da sınırlar verildiğinde eleman kendisi otomatik büyümeyi dışarıya doğru sağlıyorsa
+    bunu engellemek için box sizing border box ile sağlarız. Şu anlama gelir:
+    İç boşluk ya da sınırlar verirsek dışarıya sarkma. İçeride kal. Boyutlandırmalar benim kontrolümde olsun. */
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    outline: none;
+    border: 2px solid #ddd;
+    background-color: #eee;
+}
+
+.form__input:focus{
+    border-color: var(--color-primary);
+    background-color: white;
+    transition: 0.5s;
+}
+
+.form__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: var(--color-primary-dark);
+    transition: 0.4s;
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}
+
+.form__text {
+    text-align: center;
+}
+
+.form__link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}
+
+.form >*:first-child{
+    margin-top: 0;
+}
